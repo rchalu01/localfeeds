@@ -8,8 +8,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'first-start-page',
     pathMatch: 'full'
+  },
+  {
+    path: 'first-start-page',
+    loadChildren: () => import('./pages/first-start-page/first-start-page.module').then(m => m.FirstStartPagePageModule)
   },
 ];
 
