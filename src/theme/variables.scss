@@ -78,6 +78,22 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** Graphic charter **/
+  --ion-color-shiny-shamrock: #50a27b;
+  --ion-color-shiny-shamrock-rgb: 80, 162, 123;
+
+  --ion-color-go-green: #19a966;
+  --ion-color-go-green-rgb: 25, 169, 102;
+
+  --ion-color-emerald: #20cb79;
+  --ion-color-emerald-rgb: 32, 203, 121;
+
+  --ion-color-orange-red-crayola: #fd5d5f;
+  --ion-color-orange-red-crayola-rgb: 253, 93, 95;
+
+  --ion-color-queen-pink: #E8D6DA;
+  --ion-color-queen-pink-rgb: 232, 214, 218;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -235,3 +251,35 @@
     --ion-card-background: #1e1e1e;
   }
 }
+
+@font-face {
+  font-family: 'Balsamiq';
+  src: url('../assets/font/balsamiqsans.ttf');
+}
+
+.ion-color-shiny-shamrock {
+  --ion-color-base: var(--ion-color-shiny-shamrock);
+  --ion-color-base-rgb: var(--ion-color-shiny-shamrock-rgb);
+}
+
+.ion-color-go-green {
+  --ion-color-base: var(--ion-color-go-green);
+  --ion-color-base-rgb: var(--ion-color-go-green-rgb);
+}
+
+.ion-color-emerald {
+  --ion-color-base: var(--ion-color-emerald);
+  --ion-color-base-rgb: var(--ion-color-emerald-rgb);
+}
+
+.ion-color-orange-red-crayola {
+  --ion-color-base: var(--ion-color-orange-red-crayola);
+  --ion-color-base-rgb: var(--ion-color-orange-red-crayola-rgb);
+}
+
+.ion-color-queen-pink {
+  --ion-color-base: var(--ion-color-queen-pink);
+  --ion-color-base-rgb: var(--ion-color-queen-pink-rgb);
+}
+
+
