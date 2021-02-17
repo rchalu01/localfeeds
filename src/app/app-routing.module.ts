@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'first-start-page',
     loadChildren: () => import('./pages/first-start-page/first-start-page.module').then(m => m.FirstStartPagePageModule)
   },
+  {
+    path: 'onboarding',
+    loadChildren: () => import('./pages/onboarding/onboarding.module').then(m => m.OnboardingPageModule)
+  },
 ];
 
 @NgModule({
