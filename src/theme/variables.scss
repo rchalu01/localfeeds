@@ -282,4 +282,16 @@
   --ion-color-base-rgb: var(--ion-color-queen-pink-rgb);
 }
 
+.swiper-pagination-bullet {
+  --bullet-background: #19a966;
+  width: 8px;
+  height: 8px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #19a966;
+  width: 8px;
+  height: 8px;
+}
+
 
