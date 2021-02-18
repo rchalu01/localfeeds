@@ -1,8 +1,8 @@
 <ion-slides #sliderView pager="true" (ionSlideDidChange)="onSlideChange(slider,sliderView)">
     <ion-slide *ngFor="let slide of slider.sliderItems">
         <img src="assets/onboarding/{{slide.img}}">
-        <h2>{{slide.titre}}</h2>
-        <p>{{slide.description}}</p>
+        <h2>{{slide.title}}</h2>
+        <p>{{slide.desc}}</p>
         <ion-button id="buttonGo" color="go-green" disabled="{{slider.buttonDisabled}}">C'est parti !</ion-button>
     </ion-slide>
 </ion-slides>

@@ -9,6 +9,15 @@ ion-slide {
   flex-direction: column;
 }
 
+img {
+  width: 35%;
+  height: 35%;
+}
+
+h2 {
+  font-size: 28px;
+}
+
 p {
   margin-top: 30px;
   margin-left: 30px;
@@ -16,16 +25,7 @@ p {
   font-size: 16px;
 }
 
-img {
-  width: 35%;
-  height: 35%;
-}
-
 ion-button {
   margin-top: 50px;
   margin-bottom: 70px;
-}
-
-h2 {
-  font-size: 28px;
 }

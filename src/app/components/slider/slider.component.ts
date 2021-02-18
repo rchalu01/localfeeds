@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {IonButton, IonSlides} from "@ionic/angular";
+import {IonSlides} from "@ionic/angular";
 
 @Component({
     selector: 'app-slider',
@@ -9,7 +9,6 @@ import {IonButton, IonSlides} from "@ionic/angular";
 export class SliderComponent implements OnInit {
 
     @ViewChild('sliderView', {static: false}) sliderView: IonSlides;
-    @ViewChild('buttonGo') buttonGo: IonButton;
 
     slider: any;
 
@@ -20,20 +19,20 @@ export class SliderComponent implements OnInit {
                 {
                     id: 1,
                     img: 'salad.png',
-                    titre: 'Des produits locaux !',
-                    description: 'Trouver tous les produits que vous souhaitez et cuisiner de bons petits plats.'
+                    title: 'Des produits locaux !',
+                    desc: 'Trouver tous les produits que vous souhaitez et cuisiner de bons petits plats.'
                 },
                 {
                     id: 2,
                     img: 'food_pack.png',
-                    titre: 'Proche de chez vous !',
-                    description: 'Participer à l\'économie locale et renforcer vos liens avec producteurs locaux.'
+                    title: 'Proche de chez vous !',
+                    desc: 'Participer à l\'économie locale et renforcer vos liens avec producteurs locaux.'
                 },
                 {
                     id: 3,
                     img: 'fork_and_spoon.png',
-                    titre: 'Personnalisable !',
-                    description: 'Personnaliser vos préférences pour une expérience unique.'
+                    title: 'Personnalisable !',
+                    desc: 'Personnaliser vos préférences pour une expérience unique.'
                 }
             ]
         }
@@ -43,10 +42,20 @@ export class SliderComponent implements OnInit {
 
     }
 
+    /**
+     * Method which is used to check if this is the last of the slider
+     * @param slider
+     * @param sliderView
+     */
     onSlideChange(slider: any, sliderView: IonSlides) {
         this.checkisEnd(slider, sliderView);
     }
 
+    /**
+     * Method which is used to disabled or enabled the button according to the current slide (enabled if last slide)
+     * @param slider
+     * @param sliderView
+     */
     checkisEnd(slider: any, sliderView: IonSlides) {
         sliderView.isEnd().then((istrue) => {
             slider.buttonDisabled = !istrue;
