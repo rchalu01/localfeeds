@@ -1,0 +1,31 @@
+ion-slides {
+  height: 95%;
+  font-family: 'Balsamiq';
+  color: dimgrey;
+}
+
+ion-slide {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 16px;
+}
+
+img {
+  width: 35%;
+  height: 35%;
+}
+
+ion-button {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+h2 {
+  font-size: 28px;
+}

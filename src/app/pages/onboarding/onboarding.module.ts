@@ -1,20 +1,22 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
 
-import { IonicModule } from '@ionic/angular';
+import {IonicModule} from '@ionic/angular';
 
-import { OnboardingPageRoutingModule } from './onboarding-routing.module';
+import {OnboardingPageRoutingModule} from './onboarding-routing.module';
 
-import { OnboardingPage } from './onboarding.page';
+import {OnboardingPage} from './onboarding.page';
+import {SliderComponent} from "../../components/slider/slider.component";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    OnboardingPageRoutingModule
-  ],
-  declarations: [OnboardingPage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        OnboardingPageRoutingModule
+    ],
+    declarations: [OnboardingPage, SliderComponent]
 })
-export class OnboardingPageModule {}
+export class OnboardingPageModule {
+}
