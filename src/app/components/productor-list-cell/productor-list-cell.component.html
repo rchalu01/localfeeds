@@ -1,14 +1,17 @@
 <div class="cell">
   <div class="productor-info">
     <div class="infos">
+      <!-- Image of productor -->
       <img src="" alt="img-productor">
       <div class="productor-name">
         <div class="name">{{ productor.name }}</div>
         <div class="hour">{{ productor.schedule }}</div>
       </div>
     </div>
+    <!-- Button favorite -->
     <img class="fav-icon" src="../../../assets/icon/{{ favoriteImage }}.svg" alt="icon-fav" (click)="addToFavorite()">
   </div>
+  <!-- List of products -->
   <div class="product">
     <img src="../../../assets/icon/{{ meatImage }}.png" alt="icon-meat">
     <img src="../../../assets/icon/{{ eggImage }}.png" alt="icon-eggs">

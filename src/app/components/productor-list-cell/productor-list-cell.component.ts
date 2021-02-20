@@ -21,6 +21,7 @@ export class ProductorListCellComponent implements OnInit {
 
   ngOnInit() {
 
+    // Put products icons in color or not
     this.productor.productType.includes(1) ? this.meatImage = "meatColor": this.meatImage = "meat";
     this.productor.productType.includes(2) ? this.eggImage = "eggsColor": this.eggImage = "eggs";
     this.productor.productType.includes(3) ? this.vegetableImage = "vegetableColor": this.vegetableImage = "vegetable";
@@ -28,6 +29,7 @@ export class ProductorListCellComponent implements OnInit {
     this.productor.productType.includes(5) ? this.milkImage = "milkColor": this.milkImage = "milk";
   }
 
+  // Change buttton favorite state
   public addToFavorite() {
 
     if (this.favoriteImage == "loveWhite") 
