@@ -1,5 +1,8 @@
 .cell {
 
+    padding: 0px 16px 0px 16px;
+    margin-top: 8px;
+
     .productor-info {
 
         display: flex;
@@ -48,4 +51,10 @@
             margin-right: 12px;
         }
     }
+}
+
+hr {
+
+    height: 1px;
+    background-color: grey;
 }
