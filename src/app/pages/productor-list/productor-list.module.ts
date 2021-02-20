@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ProductorListPageRoutingModule } from './productor-list-routing.module';
 
 import { ProductorListPage } from './productor-list.page';
+import { ProductorListCellComponent } from 'src/app/components/productor-list-cell/productor-list-cell.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { ProductorListPage } from './productor-list.page';
     IonicModule,
     ProductorListPageRoutingModule
   ],
-  declarations: [ProductorListPage]
+  declarations: [ProductorListPage, ProductorListCellComponent]
 })
 export class ProductorListPageModule {}
