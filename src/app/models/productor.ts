@@ -8,4 +8,15 @@ export class Productor {
     public schedule:String
     public description:String
     public productType:Array<Product>
+
+    public toObject(): Object{
+        return {
+            name: this.name,
+            adress: this.address,
+            contact: this.contact,
+            schedule: this.schedule,
+            description: this.description,
+            productType: this.productType
+        }
+    }
 }
