@@ -7,7 +7,7 @@
         <div class="hour">{{ productor.schedule }}</div>
       </div>
     </div>
-    <img class="fav-icon" src="../../../assets/icon/loveWhite.svg" alt="icon-fav">
+    <img class="fav-icon" src="../../../assets/icon/{{ favoriteImage }}.svg" alt="icon-fav" (click)="addToFavorite()">
   </div>
   <div class="product">
     <img src="../../../assets/icon/meat.png" alt="icon-meat">

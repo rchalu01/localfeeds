@@ -8,8 +8,17 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ProductorListCellComponent implements OnInit {
 
   @Input() productor;
+  favoriteImage: string = "loveWhite";
 
   constructor() { }
 
   ngOnInit() {}
+
+  public addToFavorite() {
+
+    if (this.favoriteImage == "loveWhite") 
+      this.favoriteImage = "loveColor";
+    else
+      this.favoriteImage = "loveWhite";
+  }
 }
