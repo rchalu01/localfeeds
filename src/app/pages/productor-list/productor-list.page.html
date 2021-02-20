@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>productor-list</ion-title>
+    <ion-title>Liste des producteurs</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <app-productor-list-cell *ngFor="let productor of productors"></app-productor-list-cell>
+  <app-productor-list-cell *ngFor="let productor of productors" [productor]="productor"></app-productor-list-cell>
 </ion-content>
