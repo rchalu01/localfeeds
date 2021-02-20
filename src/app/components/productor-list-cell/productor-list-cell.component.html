@@ -2,7 +2,8 @@
   <div class="productor-info">
     <div class="infos">
       <!-- Image of productor -->
-      <img src="" alt="img-productor">
+      <img src="../../../assets/images/{{ productor.image }}.png" alt="img-productor" *ngIf="productor.image">
+      <img src="../../../assets/images/defaultFarm.jpg" alt="img-productor" *ngIf="!productor.image">
       <div class="productor-name">
         <div class="name">{{ productor.name }}</div>
         <div class="hour">{{ productor.schedule }}</div>
