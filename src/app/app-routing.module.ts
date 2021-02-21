@@ -11,6 +11,11 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'productor-list',
+    loadChildren: () => import('./pages/productor-list/productor-list.module').then( m => m.ProductorListPageModule)
+  },
+
 ];
 
 @NgModule({
