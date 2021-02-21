@@ -15,6 +15,11 @@ const routes: Routes = [
     path: 'productor-list',
     loadChildren: () => import('./pages/productor-list/productor-list.module').then( m => m.ProductorListPageModule)
   },
+  {
+    path: 'productor-details',
+    loadChildren: () => import('./pages/productor-details/productor-details.module').then( m => m.ProductorDetailsPageModule)
+  },
+
 
 ];
 
