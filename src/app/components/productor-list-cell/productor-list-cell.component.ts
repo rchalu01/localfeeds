@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { NavigationExtras, Router } from '@angular/router';
+import { NavigationExtras } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-productor-list-cell',
@@ -19,11 +20,10 @@ export class ProductorListCellComponent implements OnInit {
   milkImage: string;
 
   constructor(
-    private router: Router
+    private navCtrl: NavController
   ) { }
 
   ngOnInit() {
-    console.log(this.productor);
     
     // Put products icons in color or not
     this.productor.productType.includes(1) ? this.meatImage = "meatColor": this.meatImage = "meat";
@@ -47,9 +47,9 @@ export class ProductorListCellComponent implements OnInit {
 
     let navigationExtras: NavigationExtras = {
       state: {
-        productor: this.productor
-      }
+        produtor: this.productor
+      } 
     };
-    this.router.navigate(['productor-details', navigationExtras]);
+    this.navCtrl.navigateForward(['productor-details'], navigationExtras);    
   }
 }

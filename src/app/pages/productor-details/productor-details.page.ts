@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-productor-details',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductorDetailsPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) { 
+    this.route.queryParams.subscribe((params) => {
+      let navParams = this.router.getCurrentNavigation().extras.state;
+      console.log(navParams);
+    });
+  }
 
   ngOnInit() {
   }
