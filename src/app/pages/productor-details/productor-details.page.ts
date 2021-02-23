@@ -8,13 +8,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProductorDetailsPage implements OnInit {
 
+  productor: any;
+
   constructor(
     private route: ActivatedRoute,
     private router: Router
   ) { 
     this.route.queryParams.subscribe(() => {
-      let navParams = this.router.getCurrentNavigation().extras.state;
-      console.log(navParams);
+      this.productor = this.router.getCurrentNavigation().extras.state;
     });
   }
 

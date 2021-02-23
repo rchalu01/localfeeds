@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-productor-main-details',
@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductorMainDetailsComponent implements OnInit {
 
+  @Input() productor;
+
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.productor);
+    
+  }
 
 }
