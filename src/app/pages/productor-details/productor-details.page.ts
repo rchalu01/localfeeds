@@ -12,7 +12,7 @@ export class ProductorDetailsPage implements OnInit {
     private route: ActivatedRoute,
     private router: Router
   ) { 
-    this.route.queryParams.subscribe((params) => {
+    this.route.queryParams.subscribe(() => {
       let navParams = this.router.getCurrentNavigation().extras.state;
       console.log(navParams);
     });
