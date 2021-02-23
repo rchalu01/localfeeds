@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ProductorDetailsPageRoutingModule } from './productor-details-routing.module';
 
 import { ProductorDetailsPage } from './productor-details.page';
+import { ProductorMainDetailsComponent } from 'src/app/components/productor-main-details/productor-main-details.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { ProductorDetailsPage } from './productor-details.page';
     IonicModule,
     ProductorDetailsPageRoutingModule
   ],
-  declarations: [ProductorDetailsPage]
+  declarations: [ProductorDetailsPage, ProductorMainDetailsComponent]
 })
 export class ProductorDetailsPageModule {}
