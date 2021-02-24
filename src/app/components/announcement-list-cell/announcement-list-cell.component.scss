@@ -1,6 +1,4 @@
 .cell {
-  padding: 0px 16px 0px 16px;
-  margin-top: 8px;
 
   .announcement-infos {
     display: flex;
@@ -38,6 +36,9 @@
 
 .announcement-bottom {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4%;
 }
 
 hr {
