@@ -17,6 +17,7 @@ export class AnnouncementListCellComponent implements OnInit {
   fruitImage: string;
   milkImage: string;
   productor: any;
+  date: Date;
 
   constructor(
       private productorService: ProductorServiceService
@@ -24,9 +25,10 @@ export class AnnouncementListCellComponent implements OnInit {
 
   ngOnInit() {
     // Put products icons in color or not
-    console.log(this.announcement);
+    console.log(this.announcement.date.se);
     this.productorService.getProductor(this.announcement.productor).subscribe(value => {
       this.productor = value;
+      this.date = this.announcement.date.toDate();
       this.productor.productType.includes(Product.Viande) ? this.meatImage = "meatColor": this.meatImage = "meat";
       this.productor.productType.includes(Product.Autre) ? this.eggImage = "eggsColor": this.eggImage = "eggs";
       this.productor.productType.includes(Product.Legume) ? this.vegetableImage = "vegetableColor": this.vegetableImage = "vegetable";
