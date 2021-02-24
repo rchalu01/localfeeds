@@ -8,14 +8,16 @@ import { AnnouncementListPageRoutingModule } from './announcement-list-routing.m
 
 import { AnnouncementListPage } from './announcement-list.page';
 import {AnnouncementListCellComponent} from '../../components/announcement-list-cell/announcement-list-cell.component';
+import {ProductorListPageModule} from "../productor-list/productor-list.module";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    AnnouncementListPageRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        AnnouncementListPageRoutingModule,
+        ProductorListPageModule
+    ],
   declarations: [AnnouncementListPage, AnnouncementListCellComponent]
 })
 export class AnnouncementListPageModule {}

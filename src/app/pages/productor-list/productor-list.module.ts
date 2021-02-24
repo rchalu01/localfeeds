@@ -17,6 +17,9 @@ import {MenuNavigationBarComponent} from "../../components/menu-navigation-bar/m
         IonicModule,
         ProductorListPageRoutingModule
     ],
+    exports: [
+        MenuNavigationBarComponent
+    ],
     declarations: [ProductorListPage, ProductorListCellComponent, MenuNavigationBarComponent]
 })
 export class ProductorListPageModule {
