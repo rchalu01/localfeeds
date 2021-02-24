@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ProductorServiceService } from 'src/app/services/ProductorService/productor-service.service';
 
 @Component({
   selector: 'app-productor-main-details',
@@ -8,12 +9,16 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ProductorMainDetailsComponent implements OnInit {
 
   @Input() productorId;
+  productor: any;
 
-  constructor() { }
+  constructor(
+    private productorService: ProductorServiceService
+  ) { }
 
   ngOnInit() {
-    console.log(this.productorId);
-    
+    this.productorService.getProductor(this.productorId).subscribe((value) => {
+      this.productor = value;      
+    });
   }
 
 }
