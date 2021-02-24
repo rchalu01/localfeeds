@@ -16,6 +16,9 @@ import {SliderComponent} from "../../components/slider/slider.component";
         IonicModule,
         OnboardingPageRoutingModule
     ],
+    exports: [
+        SliderComponent
+    ],
     declarations: [OnboardingPage, SliderComponent]
 })
 export class OnboardingPageModule {
