@@ -1,3 +1,16 @@
-<p>
-  productor-main-details works!
-</p>
+<div *ngIf="productor">
+  <div class="main-details">
+    <ion-img class="productor-image" src="../../../assets/images/defaultFarm.jpg"></ion-img>
+    <div class="productor-details">
+      <ion-label>{{ productor.name }}</ion-label>
+      <div class="product">
+        <ion-img src="../../../assets/icon/{{ meatImage }}.png" alt="icon-meat"></ion-img>
+        <ion-img src="../../../assets/icon/{{ eggImage }}.png" alt="icon-eggs"></ion-img>
+        <ion-img src="../../../assets/icon/{{ vegetableImage }}.png" alt="icon-vegetable"></ion-img>
+        <ion-img src="../../../assets/icon/{{ fruitImage }}.png" alt="icon-fruits"></ion-img>
+        <ion-img src="../../../assets/icon/{{ milkImage }}.png" alt="icon-milk"></ion-img>
+      </div>
+      <ion-label>{{ productor.schedule }}</ion-label>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+.main-details {
+
+  display: flex;
+  align-items: center;
+
+  ion-img {
+
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+  }
+
+  .productor-image {
+
+    margin-right: 16px;
+  }
+
+  .productor-details {
+
+    .product {
+
+      display: flex;
+      margin-top: 12px;
+      margin-bottom: 12px;
+
+      ion-img {
+
+          width: 20px;
+          height: 20px;
+          margin-right: 12px;
+      }
+    }
+  }
+}
