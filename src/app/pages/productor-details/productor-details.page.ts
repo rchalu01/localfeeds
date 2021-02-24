@@ -14,6 +14,7 @@ export class ProductorDetailsPage implements OnInit {
     private route: ActivatedRoute,
     private router: Router
   ) { 
+    // Getting productor id from route
     this.route.queryParams.subscribe(() => {
       this.productorId = this.router.getCurrentNavigation().extras.state.id;
     });

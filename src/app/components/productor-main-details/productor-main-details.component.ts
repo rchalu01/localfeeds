@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Product } from 'src/app/models/product';
 import { ProductorServiceService } from 'src/app/services/ProductorService/productor-service.service';
 
 @Component({
@@ -22,13 +23,17 @@ export class ProductorMainDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    // Getting the productor with the id
     this.productorService.getProductor(this.productorId).subscribe((value) => {
-      this.productor = value;      
-      this.productor.productType.includes(1) ? this.meatImage = "meatColor": this.meatImage = "meat";
-      this.productor.productType.includes(2) ? this.eggImage = "eggsColor": this.eggImage = "eggs";
-      this.productor.productType.includes(3) ? this.vegetableImage = "vegetableColor": this.vegetableImage = "vegetable";
-      this.productor.productType.includes(4) ? this.fruitImage = "fruitsColor": this.fruitImage = "fruits";
-      this.productor.productType.includes(5) ? this.milkImage = "milkColor": this.milkImage = "milk";
+      this.productor = value;
+      
+      // Put products icons in color or not
+      this.productor.productType.includes(Product.Viande) ? this.meatImage = "meatColor": this.meatImage = "meat";
+      this.productor.productType.includes(Product.Autre) ? this.eggImage = "eggsColor": this.eggImage = "eggs";
+      this.productor.productType.includes(Product.Legume) ? this.vegetableImage = "vegetableColor": this.vegetableImage = "vegetable";
+      this.productor.productType.includes(Product.Fruit) ? this.fruitImage = "fruitsColor": this.fruitImage = "fruits";
+      this.productor.productType.includes(Product.Laitage) ? this.milkImage = "milkColor": this.milkImage = "milk";
     });
   }
 
