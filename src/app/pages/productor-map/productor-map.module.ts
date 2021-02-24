@@ -8,6 +8,7 @@ import { ProductorMapPageRoutingModule } from './productor-map-routing.module';
 
 import { ProductorMapPage } from './productor-map.page';
 import { DetailProductorMapComponent } from 'src/app/components/detail-productor-map/detail-productor-map.component';
+import {MapComponent} from '../../components/map/map.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { DetailProductorMapComponent } from 'src/app/components/detail-productor
     IonicModule,
     ProductorMapPageRoutingModule
   ],
-  declarations: [ProductorMapPage, DetailProductorMapComponent]
+  declarations: [ProductorMapPage, DetailProductorMapComponent, MapComponent]
 })
 export class ProductorMapPageModule {}
