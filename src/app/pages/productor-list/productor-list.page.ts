@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Productor } from 'src/app/models/productor';
 import { ProductorServiceService } from 'src/app/services/ProductorService/productor-service.service';
 
 @Component({
@@ -17,6 +16,7 @@ export class ProductorListPage implements OnInit {
 
   ngOnInit() {
 
+    // Get all productorss
     this.productorService.getProductors().subscribe(value => {
       this.productors = value;
     })
