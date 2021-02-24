@@ -19,6 +19,6 @@ export class ProductorListPage implements OnInit {
     // Get all productorss
     this.productorService.getProductors().subscribe(value => {
       this.productors = value;
-    })
+    });
   }
 }
