@@ -34,7 +34,9 @@ export class ProductorListCellComponent implements OnInit {
   }
 
   // Change buttton favorite state
-  public addToFavorite() {
+  public addToFavorite(event) {
+
+    event.stopPropagation();
 
     if (this.favoriteImage == "loveWhite") 
       this.favoriteImage = "loveColor";
