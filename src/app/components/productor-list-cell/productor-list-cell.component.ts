@@ -47,7 +47,7 @@ export class ProductorListCellComponent implements OnInit {
 
     let navigationExtras: NavigationExtras = {
       state: {
-        produtor: this.productor
+        id: this.productor.id
       } 
     };
     this.navCtrl.navigateForward(['productor-details'], navigationExtras);    

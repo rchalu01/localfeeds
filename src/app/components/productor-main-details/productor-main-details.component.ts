@@ -7,12 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProductorMainDetailsComponent implements OnInit {
 
-  @Input() productor;
+  @Input() productorId;
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this.productor);
+    console.log(this.productorId);
     
   }
 
