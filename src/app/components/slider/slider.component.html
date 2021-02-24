@@ -1,0 +1,14 @@
+<ion-slides #sliderView pager="true" (ionSlideDidChange)="onSlideChange(slider,sliderView)">
+    <ion-slide *ngFor="let slide of slider.sliderItems">
+        <img src="assets/onboarding/{{slide.img}}">
+        <h2>{{slide.title}}</h2>
+        <p>{{slide.desc}}</p>
+        <div>
+            <ion-button id="buttonNext" color="go-green" (click)="slideNext(slider, sliderView)">
+                {{slider.textButton}}
+            </ion-button>
+        </div>
+    </ion-slide>
+</ion-slides>
+
+

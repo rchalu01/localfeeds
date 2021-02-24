@@ -12,6 +12,22 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'first-start-page',
+    loadChildren: () => import('./pages/first-start-page/first-start-page.module').then(m => m.FirstStartPagePageModule)
+  },
+  {
+    path: 'onboarding',
+    loadChildren: () => import('./pages/onboarding/onboarding.module').then(m => m.OnboardingPageModule)
+  },
+  {
+    path: 'preferences',
+    loadChildren: () => import('./pages/preferences/preferences.module').then(m => m.PreferencesPageModule)
+  },
+  {
+    path: 'map',
+    loadChildren: () => import('./pages/map/map.module').then(m => m.MapPageModule)
+  },
+  {
     path: 'productor-list',
     loadChildren: () => import('./pages/productor-list/productor-list.module').then( m => m.ProductorListPageModule)
   },

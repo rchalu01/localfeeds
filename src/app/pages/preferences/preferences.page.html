@@ -1,0 +1,20 @@
+<ion-content>
+    <div class="style-content">
+        <div style="display: flex; justify-content: center">
+            <img src="assets/preferences/food.png">
+        </div>
+        <h2>Parlez-nous un peu de vous</h2>
+        <ion-item class="style-pref">
+            <p>Vous êtes végétarien</p>
+            <ion-toggle [(ngModel)]="isToggled">
+
+            </ion-toggle>
+        </ion-item>
+        <ion-button class="buttonConfirm" id="buttonConfirm" color="go-green"
+                    (click)="savePreferences()">Confirmer
+        </ion-button>
+        <ion-button class="buttonLater" fill="clear" color="orange-red-crayola"
+                    (click)="savePreferences()">Plus tard
+        </ion-button>
+    </div>
+</ion-content>
