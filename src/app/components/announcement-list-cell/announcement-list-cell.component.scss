@@ -9,7 +9,7 @@
     .announcement-top {
       display: flex;
       justify-content: space-between;
-      background-color: #2fdf75;
+      background-color: #28ba62;
       padding: 4%;
         .title {
           font-weight: bold;
@@ -34,14 +34,30 @@
   }
 }
 
+ion-text {
+  color: #383a3e;
+}
+
 .announcement-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 4%;
+
+  ion-button {
+    --background: #28ba62;
+    --color: #383a3e;
+  }
+
 }
 
 hr {
-  height: 1px;
-  background-color: grey;
+  height: 2px;
+  color: #383a3e;
+  background-color: #383a3e;
+  margin: 0;
+}
+
+ion-icon {
+  margin-left: 3%;
 }
