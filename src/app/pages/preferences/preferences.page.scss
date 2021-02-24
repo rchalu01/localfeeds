@@ -28,12 +28,18 @@ h2 {
   color: dimgrey !important;
 }
 
-ion-button {
+.buttonConfirm {
   position: absolute;
   margin-top: 600px;
 }
 
+.buttonLater {
+  position: absolute;
+  margin-top: 690px;
+  font-size: 12px;
+}
+
 ion-toggle {
-  --background-checked: rgba(var(--ion-color-go-green-rgb), 0.5) !important;
+  --background-checked: rgba(var(--ion-color-go-green-rgb), 0.4) !important;
   --handle-background-checked: rgba(var(--ion-color-go-green-rgb)) !important;
 }

@@ -10,7 +10,8 @@ import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 
 import {AngularFireModule} from '@angular/fire'
-import {AngularFirestoreModule} from '@angular/fire/firestore'
+
+import {IonicStorageModule} from '@ionic/storage';
 
 export const firebaseConfig = {
     apiKey: "AIzaSyA5M3SiENGyjS8ryv1VBIudX74jbLyyNsw",
@@ -28,7 +29,8 @@ export const firebaseConfig = {
         BrowserModule,
         IonicModule.forRoot(),
         AppRoutingModule,
-        AngularFireModule.initializeApp(firebaseConfig)
+        AngularFireModule.initializeApp(firebaseConfig),
+        IonicStorageModule.forRoot()
     ],
     providers: [
         StatusBar,
