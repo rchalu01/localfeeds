@@ -1,0 +1,46 @@
+.cell {
+  padding: 0px 16px 0px 16px;
+  margin-top: 8px;
+
+  .announcement-infos {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .announcement-top {
+      display: flex;
+      justify-content: space-between;
+      background-color: #2fdf75;
+      padding: 4%;
+        .title {
+          font-weight: bold;
+        }
+    }
+
+    .announcement-content {
+      margin: 4%;
+    }
+
+  }
+
+  .product {
+    display: flex;
+    margin: 4%;
+
+    img {
+      width: 25px;
+      height: 25px;
+      margin-right: 12px;
+    }
+  }
+}
+
+.announcement-bottom {
+  display: flex;
+}
+
+hr {
+  height: 1px;
+  background-color: grey;
+}

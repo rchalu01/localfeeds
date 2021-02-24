@@ -1,0 +1,24 @@
+<div class="cell" *ngIf="announcement">
+  <div class="announcement-infos">
+    <div class="announcement-top">
+      <ion-text class="title">{{ announcement.title }}</ion-text>
+      <ion-text>{{ announcement.date.seconds | date :'dd/MM/yyyy' }}</ion-text>
+    </div>
+    <div class="announcement-content">
+      <ion-text>{{ announcement.content }}</ion-text>
+    </div>
+  </div>
+  <!-- List of products -->
+  <div class="product">
+    <img src="../../../assets/icon/{{ meatImage }}.png" alt="icon-meat">
+    <img src="../../../assets/icon/{{ eggImage }}.png" alt="icon-eggs">
+    <img src="../../../assets/icon/{{ vegetableImage }}.png" alt="icon-vegetable">
+    <img src="../../../assets/icon/{{ fruitImage }}.png" alt="icon-fruits">
+    <img src="../../../assets/icon/{{ milkImage }}.png" alt="icon-milk">
+  </div>
+  <div class="announcement-bottom">
+    <ion-button>{{ productor.name }}</ion-button>
+    <ion-text>11.2km</ion-text>
+  </div>
+</div>
+<hr>
