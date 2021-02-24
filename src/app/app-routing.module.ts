@@ -14,7 +14,11 @@ const routes: Routes = [
   {
     path: 'productor-list',
     loadChildren: () => import('./pages/productor-list/productor-list.module').then( m => m.ProductorListPageModule)
+  },  {
+    path: 'favorite-productor',
+    loadChildren: () => import('./pages/favorite-productor/favorite-productor.module').then( m => m.FavoriteProductorPageModule)
   },
+
 
 ];
 
