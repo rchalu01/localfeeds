@@ -17,6 +17,12 @@
 
   .productor-details {
 
+    .name {
+
+      font-weight: bold;
+      font-size: 18px;
+    }
+
     .product {
 
       display: flex;
@@ -31,4 +37,9 @@
       }
     }
   }
+}
+
+.productor-description {
+
+  margin-top: 16px;
 }
