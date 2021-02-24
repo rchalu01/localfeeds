@@ -1,7 +1,8 @@
 ion-slides {
-  height: 95%;
+  margin-top: 100px;
   font-family: 'Balsamiq';
   color: dimgrey;
+  padding-bottom: 50px;
 }
 
 ion-slide {
@@ -25,7 +26,15 @@ p {
   font-size: 16px;
 }
 
-ion-button {
+.buttonGo {
   margin-top: 50px;
   margin-bottom: 70px;
+}
+
+ion-button {
+  margin-top: 90px;
+}
+
+ion-icon {
+  font-size: 35px;
 }

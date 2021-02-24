@@ -1,0 +1,39 @@
+img {
+  width: 35%;
+  height: 35%;
+}
+
+.style-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 100px;
+
+  font-family: 'Balsamiq' !important;
+  color: dimgrey !important;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.style-pref {
+  --ion-item-background: transparent !important;
+  --inner-border-width: 0;
+  font-family: 'Balsamiq' !important;
+  color: dimgrey !important;
+}
+
+ion-button {
+  position: absolute;
+  margin-top: 600px;
+}
+
+ion-toggle {
+  --background-checked: rgba(var(--ion-color-go-green-rgb), 0.5) !important;
+  --handle-background-checked: rgba(var(--ion-color-go-green-rgb)) !important;
+}

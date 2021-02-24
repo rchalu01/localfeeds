@@ -1,5 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {IonSlides} from "@ionic/angular";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-slider',
@@ -12,9 +13,9 @@ export class SliderComponent implements OnInit {
 
     slider: any;
 
-    constructor() {
+    constructor(private router: Router) {
         this.slider = {
-            buttonDisabled: true,
+            textButton: "Suivant",
             sliderItems: [
                 {
                     id: 1,
@@ -42,6 +43,16 @@ export class SliderComponent implements OnInit {
 
     }
 
+    slideNext(slider: any, sliderView: IonSlides) {
+        if (slider.textButton == "C'est parti") {
+            this.router.navigate(['/preferences']);
+        } else {
+            sliderView.slideNext(500).then(() => {
+
+            });
+        }
+    }
+
     /**
      * Method which is used to check if this is the last of the slider
      * @param slider
@@ -58,7 +69,12 @@ export class SliderComponent implements OnInit {
      */
     checkisEnd(slider: any, sliderView: IonSlides) {
         sliderView.isEnd().then((istrue) => {
-            slider.buttonDisabled = !istrue;
+            if (istrue) {
+                slider.textButton = "C'est parti";
+
+            } else {
+                slider.textButton = "Suivant";
+            }
         });
     }
 }

@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'onboarding',
     loadChildren: () => import('./pages/onboarding/onboarding.module').then(m => m.OnboardingPageModule)
   },
+  {
+    path: 'preferences',
+    loadChildren: () => import('./pages/preferences/preferences.module').then(m => m.PreferencesPageModule)
+  },
 ];
 
 @NgModule({
