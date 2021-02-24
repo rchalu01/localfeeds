@@ -94,9 +94,13 @@
 
   --ion-color-queen-pink: #E8D6DA;
   --ion-color-queen-pink-rgb: 232, 214, 218;
+
+  /** Customize font **/
+  --ion-font-family: 'Balsamiq';
 }
 
 @media (prefers-color-scheme: dark) {
+
   /*
    * Dark Colors
    * -------------------------------------------

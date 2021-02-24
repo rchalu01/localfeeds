@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-first-start-page',
-  templateUrl: './first-start-page.page.html',
-  styleUrls: ['./first-start-page.page.scss'],
+    selector: 'app-first-start-page',
+    templateUrl: './first-start-page.page.html',
+    styleUrls: ['./first-start-page.page.scss'],
 })
 export class FirstStartPagePage implements OnInit {
 
-  constructor() { }
+    img: string;
 
-  ngOnInit() {
-  }
+    constructor() {
+        this.img = "assets/onboarding/logo_localfeeds.png";
+    }
+
+    ngOnInit() {
+    }
 
 }
