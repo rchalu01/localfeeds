@@ -16,6 +16,7 @@ export class ProductorListPage implements OnInit {
 
   ngOnInit() {
 
+    // Get all productorss
     this.productorService.getProductors().subscribe(value => {
       this.productors = value;
     })
