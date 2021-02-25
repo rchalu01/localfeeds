@@ -17,9 +17,7 @@ export class FavoriteProductorPage implements OnInit {
   ngOnInit() {
 
     this.storage.get('favorite').then((val) => {
-      this.favoriteList = JSON.parse(val);
-      console.log(this.favoriteList);
-      
+      this.favoriteList = JSON.parse(val);      
     });
   }
 

@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { FavoriteProductorPageRoutingModule } from './favorite-productor-routing.module';
 
 import { FavoriteProductorPage } from './favorite-productor.page';
+import { ProductorListCellComponent } from 'src/app/components/productor-list-cell/productor-list-cell.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { FavoriteProductorPage } from './favorite-productor.page';
     IonicModule,
     FavoriteProductorPageRoutingModule
   ],
-  declarations: [FavoriteProductorPage]
+  declarations: [FavoriteProductorPage, ProductorListCellComponent]
 })
 export class FavoriteProductorPageModule {}
