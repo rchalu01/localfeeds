@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-favorite-productor',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoriteProductorPage implements OnInit {
 
-  constructor() { }
+  favoriteList: any = [];
+
+  constructor(
+    private storage: Storage
+  ) { }
 
   ngOnInit() {
+
+    this.storage.get('favorite').then((val) => {
+      this.favoriteList = JSON.parse(val);
+      console.log(this.favoriteList);
+      
+    });
   }
 
 }
