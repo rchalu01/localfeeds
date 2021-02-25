@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Storage } from '@ionic/storage';
 
 @Component({
@@ -11,15 +12,18 @@ export class FavoriteProductorPage implements OnInit {
   favoriteList: any = [];
 
   constructor(
-    private storage: Storage
-  ) { }
+    private storage: Storage,
+    private route: ActivatedRoute
+  ) {
+    this.route.params.subscribe(val => {
+      // Get favorite list
+      this.storage.get('favorite').then((val) => {
+        this.favoriteList = JSON.parse(val);      
+      });
+    })
+  }
 
   ngOnInit() {
-
-    // Get favorite list
-    this.storage.get('favorite').then((val) => {
-      this.favoriteList = JSON.parse(val);      
-    });
   }
 
 }
