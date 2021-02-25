@@ -1,5 +1,6 @@
 <ion-content>
   <div class="content">
     <app-productor-main-details [productorId]="productorId"></app-productor-main-details>
+    <app-announcement-list-cell *ngIf="announcement != ''" [announcement]="announcement"></app-announcement-list-cell>
   </div>
 </ion-content>
