@@ -25,6 +25,7 @@ export class ProductorListCellComponent implements OnInit {
 
   ngOnInit() {
 
+    // Check if the productor is in the list of favorite to color the fav icon
     this.storage.get('favorite').then((val) => {
       if (this.alreadyFav(JSON.parse(val))) {
         this.favoriteImage = "loveColor";
@@ -47,7 +48,7 @@ export class ProductorListCellComponent implements OnInit {
       if (val) {
         
         val = JSON.parse(val);       
-
+        
         if (!this.alreadyFav(val)) {
           this.favoriteImage = "loveColor";
           val.push(this.productor);
@@ -60,11 +61,10 @@ export class ProductorListCellComponent implements OnInit {
         this.favoriteImage = "loveColor";
         this.storage.set('favorite', JSON.stringify([this.productor]));
       }
-
-      console.log(val);
     });
   }
 
+  // Check if the current productor is in the array favs
   private alreadyFav(favs) {
 
     let finded = false;
