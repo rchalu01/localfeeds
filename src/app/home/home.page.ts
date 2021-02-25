@@ -10,27 +10,18 @@ import {Storage} from "@ionic/storage";
 })
 export class HomePage implements OnInit {
 
-    firstVisit: Boolean;
+    firstVisit: boolean;
 
-    public announcements: Object;
-    public announcement: Object;
-
-    constructor(public readonly announcementService:AnnouncementServiceService, private router: Router, private storage: Storage) {
-
-    }
+    constructor(private router: Router,
+                private storage: Storage
+    ){}
 
     ngOnInit() {
-        this.announcementService.getAnnouncements().subscribe(value => {
-        this.announcements = value
-        });
-        this.announcementService.getAnnouncement('11X7qcTBAmX3KhNludGV').subscribe(value => {
-        this.announcement = value
-        });
         this.storage.get('firstVisit').then(value => {
             if (value == null) {
                 this.router.navigate(['first-start-page']);
             } else {
-                this.router.navigate(['map']);
+                this.router.navigate(['productor-map']);
             }
         });
     }
