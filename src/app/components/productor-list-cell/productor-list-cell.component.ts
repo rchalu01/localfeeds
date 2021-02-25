@@ -27,7 +27,7 @@ export class ProductorListCellComponent implements OnInit {
 
     // Check if the productor is in the list of favorite to color the fav icon
     this.storage.get('favorite').then((val) => {
-      if (this.alreadyFav(JSON.parse(val))) {
+      if (val && this.alreadyFav(JSON.parse(val))) {
         this.favoriteImage = "loveColor";
       }
     });
