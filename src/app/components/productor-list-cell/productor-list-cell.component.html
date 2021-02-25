@@ -1,4 +1,4 @@
-<div class="cell">
+<div class="cell" (click)="openProductorDetailPage()">
   <div class="productor-info">
     <div class="infos">
       <!-- Image of productor -->
@@ -10,7 +10,7 @@
       </div>
     </div>
     <!-- Button favorite -->
-    <ion-img class="fav-icon" src="../../../assets/icon/{{ favoriteImage }}.svg" alt="icon-fav" (click)="addToFavorite()"></ion-img>
+    <img class="fav-icon" src="../../../assets/icon/{{ favoriteImage }}.svg" alt="icon-fav" (click)="addToFavorite($event)">
   </div>
   <!-- List of products -->
   <div class="product">

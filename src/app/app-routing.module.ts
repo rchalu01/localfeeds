@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/productor-list/productor-list.module').then( m => m.ProductorListPageModule)
   },
   {
+    path: 'productor-details',
+    loadChildren: () => import('./pages/productor-details/productor-details.module').then( m => m.ProductorDetailsPageModule)
+  },
+  {
     path: 'favorite-productor',
     loadChildren: () => import('./pages/favorite-productor/favorite-productor.module').then( m => m.FavoriteProductorPageModule)
   },
@@ -42,7 +46,7 @@ const routes: Routes = [
   {
     path: 'productor-map',
     loadChildren: () => import('./pages/productor-map/productor-map.module').then( m => m.ProductorMapPageModule)
-  },
+  }
 
 ];
 

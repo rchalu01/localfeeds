@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NavigationExtras } from '@angular/router';
+import { NavController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
 import { Product } from 'src/app/models/product';
 
@@ -20,7 +22,8 @@ export class ProductorListCellComponent implements OnInit {
   milkImage: string;
 
   constructor(
-    private storage: Storage
+    private storage: Storage,
+    private navCtrl: NavController
   ) { }
 
   ngOnInit() {
@@ -41,8 +44,10 @@ export class ProductorListCellComponent implements OnInit {
   }
 
   // Change buttton favorite state
-  public addToFavorite() {
+  public addToFavorite(event) {
     
+    event.stopPropagation();
+
     this.storage.get('favorite').then((val) => {
 
       if (val) {
@@ -77,5 +82,16 @@ export class ProductorListCellComponent implements OnInit {
     });
 
     return finded;
+  }
+
+  // Navigate to productor details page
+  public openProductorDetailPage() {
+
+    let navigationExtras: NavigationExtras = {
+      state: {
+        id: this.productor.id
+      } 
+    };
+    this.navCtrl.navigateForward(['productor-details'], navigationExtras);    
   }
 }
