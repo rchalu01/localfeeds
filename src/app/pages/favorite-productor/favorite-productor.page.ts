@@ -15,7 +15,7 @@ export class FavoriteProductorPage implements OnInit {
     private storage: Storage,
     private route: ActivatedRoute
   ) {
-    this.route.params.subscribe(val => {
+    this.route.params.subscribe(() => {
       // Get favorite list
       this.storage.get('favorite').then((val) => {
         this.favoriteList = JSON.parse(val);      
