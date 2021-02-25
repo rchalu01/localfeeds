@@ -1,0 +1,17 @@
+<ion-card *ngIf="productor"  >
+  <section class="farmImg">
+    <ion-img  class="imgFarm" src="../../../assets/images/defaultFarm.jpg" ></ion-img>
+  </section>
+  <section class="content">
+    <ion-card-title>{{ this.productor.name }}</ion-card-title>
+    <ion-card-subtitle>{{ this.productor.schedule }}</ion-card-subtitle>
+    <section class="product">
+      <ion-img src="../../../assets/icon/{{ meatImage }}.png" alt="icon-meat"></ion-img>
+      <ion-img src="../../../assets/icon/{{ eggImage }}.png" alt="icon-eggs"></ion-img>
+      <ion-img src="../../../assets/icon/{{ vegetableImage }}.png" alt="icon-vegetable"></ion-img>
+      <ion-img src="../../../assets/icon/{{ fruitImage }}.png" alt="icon-fruits"></ion-img>
+      <ion-img src="../../../assets/icon/{{ milkImage }}.png" alt="icon-milk"></ion-img>
+    </section>
+    <ion-card-content>{{ this.productor.description }}</ion-card-content>
+  </section>
+</ion-card>

@@ -1,0 +1,44 @@
+img {
+  width: 35%;
+  height: 35%;
+}
+
+.style-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 100px;
+
+  color: dimgrey !important;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.style-pref {
+  --ion-item-background: transparent !important;
+  --inner-border-width: 0;
+
+  color: dimgrey !important;
+}
+
+.buttonConfirm {
+  position: absolute;
+  margin-top: 600px;
+}
+
+.buttonLater {
+  position: absolute;
+  margin-top: 690px;
+  font-size: 12px;
+}
+
+ion-toggle {
+  --background-checked: rgba(var(--ion-color-go-green-rgb), 0.4) !important;
+  --handle-background-checked: rgba(var(--ion-color-go-green-rgb)) !important;
+}

@@ -1,0 +1,63 @@
+.cell {
+
+  .announcement-infos {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .announcement-top {
+      display: flex;
+      justify-content: space-between;
+      background-color: #28ba62;
+      padding: 4%;
+        .title {
+          font-weight: bold;
+        }
+    }
+
+    .announcement-content {
+      margin: 4%;
+    }
+
+  }
+
+  .product {
+    display: flex;
+    margin: 4%;
+
+    img {
+      width: 25px;
+      height: 25px;
+      margin-right: 12px;
+    }
+  }
+}
+
+ion-text {
+  color: #383a3e;
+}
+
+.announcement-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4%;
+
+  ion-button {
+    --background: #28ba62;
+    --color: #383a3e;
+  }
+
+}
+
+hr {
+  height: 2px;
+  color: #383a3e;
+  background-color: #383a3e;
+  margin: 0;
+}
+
+ion-icon {
+  margin-left: 3%;
+}

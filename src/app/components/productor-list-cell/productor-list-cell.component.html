@@ -2,11 +2,11 @@
   <div class="productor-info">
     <div class="infos">
       <!-- Image of productor -->
-      <img src="../../../assets/images/{{ productor.image }}.png" alt="img-productor" *ngIf="productor.image">
-      <img src="../../../assets/images/defaultFarm.jpg" alt="img-productor" *ngIf="!productor.image">
+      <ion-img src="../../../assets/images/{{ productor.image }}.png" alt="img-productor" *ngIf="productor.image"></ion-img>
+      <ion-img src="../../../assets/images/defaultFarm.jpg" alt="img-productor" *ngIf="!productor.image"></ion-img>
       <div class="productor-name">
-        <div class="name">{{ productor.name }}</div>
-        <div class="hour">{{ productor.schedule }}</div>
+        <ion-label class="name">{{ productor.name }}</ion-label>
+        <ion-label class="hour">{{ productor.schedule }}</ion-label>
       </div>
     </div>
     <!-- Button favorite -->
@@ -14,11 +14,11 @@
   </div>
   <!-- List of products -->
   <div class="product">
-    <img src="../../../assets/icon/{{ meatImage }}.png" alt="icon-meat">
-    <img src="../../../assets/icon/{{ eggImage }}.png" alt="icon-eggs">
-    <img src="../../../assets/icon/{{ vegetableImage }}.png" alt="icon-vegetable">
-    <img src="../../../assets/icon/{{ fruitImage }}.png" alt="icon-fruits">
-    <img src="../../../assets/icon/{{ milkImage }}.png" alt="icon-milk">
+    <ion-img src="../../../assets/icon/{{ meatImage }}.png" alt="icon-meat"></ion-img>
+    <ion-img src="../../../assets/icon/{{ eggImage }}.png" alt="icon-eggs"></ion-img>
+    <ion-img src="../../../assets/icon/{{ vegetableImage }}.png" alt="icon-vegetable"></ion-img>
+    <ion-img src="../../../assets/icon/{{ fruitImage }}.png" alt="icon-fruits"></ion-img>
+    <ion-img src="../../../assets/icon/{{ milkImage }}.png" alt="icon-milk"></ion-img>
   </div>
 </div>
 <hr>

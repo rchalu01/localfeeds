@@ -2,6 +2,7 @@
 
     padding: 0px 16px 0px 16px;
     margin-top: 8px;
+    color: black;
     
     .productor-info {
 
@@ -14,14 +15,18 @@
             display: flex;
             align-items: center;
 
-            img {
+            ion-img {
 
                 width: 70px;
                 height: 70px;
+                object-fit: cover;
                 margin-right: 16px;
             }
 
             .productor-name {
+
+                display: flex;
+                flex-direction: column;
 
                 .name {
 
@@ -43,7 +48,7 @@
         display: flex;
         margin-top: 12px;
 
-        img {
+        ion-img  {
 
             width: 25px;
             height: 25px;
@@ -53,7 +58,6 @@
 }
 
 hr {
-
     height: 1px;
     background-color: grey;
 }
