@@ -16,3 +16,10 @@ ion-tab-button {
   width: 45%;
   height: 60%;
 }
+ion-tabs{
+  top: unset;
+  left: unset;
+  right: unset;
+  contain: none;
+  height: unset;
+}

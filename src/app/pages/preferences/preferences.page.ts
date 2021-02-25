@@ -22,6 +22,6 @@ export class PreferencesPage implements OnInit {
     savePreferences() {
         this.storage.set('firstVisit', false);
         this.storage.set('vege', this.isToggled);
-        this.router.navigate(['/map']);
+        this.router.navigate(['/productor-map']);
     }
 }
