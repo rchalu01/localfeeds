@@ -9,6 +9,7 @@ import { ProductorMapPageRoutingModule } from './productor-map-routing.module';
 import { ProductorMapPage } from './productor-map.page';
 import { DetailProductorMapComponent } from 'src/app/components/detail-productor-map/detail-productor-map.component';
 import {MapComponent} from '../../components/map/map.component';
+import {MenuNavigationBarComponent} from '../../components/menu-navigation-bar/menu-navigation-bar.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,6 @@ import {MapComponent} from '../../components/map/map.component';
     IonicModule,
     ProductorMapPageRoutingModule
   ],
-  declarations: [ProductorMapPage, DetailProductorMapComponent, MapComponent]
+  declarations: [ProductorMapPage, DetailProductorMapComponent, MapComponent, MenuNavigationBarComponent]
 })
 export class ProductorMapPageModule {}
