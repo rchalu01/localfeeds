@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Storage } from '@ionic/storage';
 import { Product } from 'src/app/models/product';
 
 @Component({
@@ -18,7 +19,9 @@ export class ProductorListCellComponent implements OnInit {
   fruitImage: string;
   milkImage: string;
 
-  constructor() { }
+  constructor(
+    private storage: Storage
+  ) { }
 
   ngOnInit() {
 
@@ -32,10 +35,41 @@ export class ProductorListCellComponent implements OnInit {
 
   // Change buttton favorite state
   public addToFavorite() {
+    
+    this.storage.get('favorite').then((val) => {
 
-    if (this.favoriteImage == "loveWhite") 
-      this.favoriteImage = "loveColor";
-    else
-      this.favoriteImage = "loveWhite";
+      if (val) {
+        
+        val = JSON.parse(val);       
+
+        if (!this.alreadyFav(val)) {
+          this.favoriteImage = "loveColor";
+          val.push(this.productor);
+        } else {          
+          this.favoriteImage = "loveWhite";
+          val = val.filter(productor => this.productor.name != productor.name);
+        }
+        this.storage.set('favorite', JSON.stringify(val));
+      } else {
+        this.favoriteImage = "loveColor";
+        this.storage.set('favorite', JSON.stringify([this.productor]));
+      }
+
+      console.log(val);
+    });
+  }
+
+  private alreadyFav(favs) {
+
+    let finded = false;
+
+    favs.forEach(productor => {
+      
+      if (productor.name == this.productor.name) {
+        finded = true;
+      }
+    });
+
+    return finded;
   }
 }
