@@ -8,6 +8,7 @@ import { FavoriteProductorPageRoutingModule } from './favorite-productor-routing
 
 import { FavoriteProductorPage } from './favorite-productor.page';
 import { ProductorListCellComponent } from 'src/app/components/productor-list-cell/productor-list-cell.component';
+import { MenuNavigationBarComponent } from 'src/app/components/menu-navigation-bar/menu-navigation-bar.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { ProductorListCellComponent } from 'src/app/components/productor-list-ce
     IonicModule,
     FavoriteProductorPageRoutingModule
   ],
-  declarations: [FavoriteProductorPage, ProductorListCellComponent]
+  declarations: [FavoriteProductorPage, ProductorListCellComponent, MenuNavigationBarComponent]
 })
 export class FavoriteProductorPageModule {}
