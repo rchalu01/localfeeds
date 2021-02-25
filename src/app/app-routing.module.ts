@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'announcement-list',
     loadChildren: () => import('./pages/announcement-list/announcement-list.module').then( m => m.AnnouncementListPageModule)
   },
+  {
+    path: 'productor-map',
+    loadChildren: () => import('./pages/productor-map/productor-map.module').then( m => m.ProductorMapPageModule)
+  },
 
 ];
 

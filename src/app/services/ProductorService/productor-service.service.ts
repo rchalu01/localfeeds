@@ -18,7 +18,7 @@ export class ProductorServiceService {
 
   //Récupere la liste des producteurs
   public getProductors(): Observable<Object> {
-    return this.firestore.collection("productors").valueChanges();
+    return this.firestore.collection("productors").valueChanges({idField: 'id'});
   }
 
   //Récupere un producteur. id du prdocuteur en paramétre
