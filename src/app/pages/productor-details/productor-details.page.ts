@@ -11,6 +11,7 @@ export class ProductorDetailsPage implements OnInit {
 
   productorId: any;
   announcement: any = '';
+  position: any = [-1.045499, 46.169372];
 
   constructor(
     private route: ActivatedRoute,

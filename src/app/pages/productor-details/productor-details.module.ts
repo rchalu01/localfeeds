@@ -8,8 +8,8 @@ import { ProductorDetailsPageRoutingModule } from './productor-details-routing.m
 
 import { ProductorDetailsPage } from './productor-details.page';
 import { ProductorMainDetailsComponent } from 'src/app/components/productor-main-details/productor-main-details.component';
-import { DetailProductorMapComponent } from 'src/app/components/detail-productor-map/detail-productor-map.component';
 import { AnnouncementListCellComponent } from 'src/app/components/announcement-list-cell/announcement-list-cell.component';
+import { MapProductorDetailComponent } from 'src/app/components/map-productor-detail/map-productor-detail.component';
 
 @NgModule({
   imports: [
@@ -18,6 +18,6 @@ import { AnnouncementListCellComponent } from 'src/app/components/announcement-l
     IonicModule,
     ProductorDetailsPageRoutingModule
   ],
-  declarations: [ProductorDetailsPage, ProductorMainDetailsComponent, DetailProductorMapComponent, AnnouncementListCellComponent]
+  declarations: [ProductorDetailsPage, ProductorMainDetailsComponent, MapProductorDetailComponent, AnnouncementListCellComponent]
 })
 export class ProductorDetailsPageModule {}
