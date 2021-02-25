@@ -25,6 +25,12 @@ export class ProductorListCellComponent implements OnInit {
 
   ngOnInit() {
 
+    this.storage.get('favorite').then((val) => {
+      if (this.alreadyFav(JSON.parse(val))) {
+        this.favoriteImage = "loveColor";
+      }
+    });
+
     // Put products icons in color or not
     this.productor.productType.includes(Product.Viande) ? this.meatImage = "meatColor": this.meatImage = "meat";
     this.productor.productType.includes(Product.Autre) ? this.eggImage = "eggsColor": this.eggImage = "eggs";
