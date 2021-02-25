@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore'
-import { Observable } from 'rxjs'
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -13,11 +13,15 @@ export class AnnouncementServiceService {
   ) { }
 
   public getAnnouncements(): Observable<Object> {
-    return this.firestore.collection("announcements").valueChanges();
+    return this.firestore.collection('announcements').valueChanges();
   }
 
   public getAnnouncement(id: string): Observable<Object> {
-    return this.firestore.collection("announcements").doc(id).valueChanges();
+    return this.firestore.collection('announcements').doc(id).valueChanges();
+  }
+
+  public getAnnouncementByProductor(id: string): Observable<Object> {
+    return this.firestore.collection('announcements', ref => ref.where('productor', '==', id )).valueChanges();
   }
 
 }
