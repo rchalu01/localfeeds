@@ -12,6 +12,14 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'productor-list',
+    loadChildren: () => import('./pages/productor-list/productor-list.module').then( m => m.ProductorListPageModule)
+  },
+  {
+    path: 'favorite-productor',
+    loadChildren: () => import('./pages/favorite-productor/favorite-productor.module').then( m => m.FavoriteProductorPageModule)
+  },
+  {
     path: 'first-start-page',
     loadChildren: () => import('./pages/first-start-page/first-start-page.module').then(m => m.FirstStartPagePageModule)
   },
@@ -26,10 +34,6 @@ const routes: Routes = [
   {
     path: 'map',
     loadChildren: () => import('./pages/map/map.module').then(m => m.MapPageModule)
-  },
-  {
-    path: 'productor-list',
-    loadChildren: () => import('./pages/productor-list/productor-list.module').then( m => m.ProductorListPageModule)
   },
   {
     path: 'announcement-list',

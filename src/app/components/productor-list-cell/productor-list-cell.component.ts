@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Storage } from '@ionic/storage';
 import { Product } from 'src/app/models/product';
 
 @Component({
@@ -18,9 +19,18 @@ export class ProductorListCellComponent implements OnInit {
   fruitImage: string;
   milkImage: string;
 
-  constructor() { }
+  constructor(
+    private storage: Storage
+  ) { }
 
   ngOnInit() {
+
+    // Check if the productor is in the list of favorite to color the fav icon
+    this.storage.get('favorite').then((val) => {
+      if (this.alreadyFav(JSON.parse(val))) {
+        this.favoriteImage = "loveColor";
+      }
+    });
 
     // Put products icons in color or not
     this.productor.productType.includes(Product.Viande) ? this.meatImage = "meatColor": this.meatImage = "meat";
@@ -32,10 +42,40 @@ export class ProductorListCellComponent implements OnInit {
 
   // Change buttton favorite state
   public addToFavorite() {
+    
+    this.storage.get('favorite').then((val) => {
 
-    if (this.favoriteImage == "loveWhite") 
-      this.favoriteImage = "loveColor";
-    else
-      this.favoriteImage = "loveWhite";
+      if (val) {
+        
+        val = JSON.parse(val);       
+        
+        if (!this.alreadyFav(val)) {
+          this.favoriteImage = "loveColor";
+          val.push(this.productor);
+        } else {          
+          this.favoriteImage = "loveWhite";
+          val = val.filter(productor => this.productor.name != productor.name);
+        }
+        this.storage.set('favorite', JSON.stringify(val));
+      } else {
+        this.favoriteImage = "loveColor";
+        this.storage.set('favorite', JSON.stringify([this.productor]));
+      }
+    });
+  }
+
+  // Check if the current productor is in the array favs
+  private alreadyFav(favs) {
+
+    let finded = false;
+
+    favs.forEach(productor => {
+      
+      if (productor.name == this.productor.name) {
+        finded = true;
+      }
+    });
+
+    return finded;
   }
 }
