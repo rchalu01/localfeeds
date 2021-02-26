@@ -10,6 +10,7 @@ import { ProductorDetailsPage } from './productor-details.page';
 import { ProductorMainDetailsComponent } from 'src/app/components/productor-main-details/productor-main-details.component';
 import { AnnouncementListCellComponent } from 'src/app/components/announcement-list-cell/announcement-list-cell.component';
 import { MapProductorDetailComponent } from 'src/app/components/map-productor-detail/map-productor-detail.component';
+import {MenuNavigationBarComponent} from '../../components/menu-navigation-bar/menu-navigation-bar.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,6 @@ import { MapProductorDetailComponent } from 'src/app/components/map-productor-de
     IonicModule,
     ProductorDetailsPageRoutingModule
   ],
-  declarations: [ProductorDetailsPage, ProductorMainDetailsComponent, MapProductorDetailComponent, AnnouncementListCellComponent]
+  declarations: [ProductorDetailsPage, ProductorMainDetailsComponent, MapProductorDetailComponent, AnnouncementListCellComponent,MenuNavigationBarComponent]
 })
 export class ProductorDetailsPageModule {}
