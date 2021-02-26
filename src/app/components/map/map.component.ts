@@ -5,6 +5,7 @@ import {ProductorServiceService} from '../../services/ProductorService/productor
 import firebase from 'firebase';
 import TIMESTAMP = firebase.database.ServerValue.TIMESTAMP;
 import {Product} from '../../models/product';
+import {Storage} from '@ionic/storage';
 
 
 @Component({
@@ -21,7 +22,8 @@ export class MapComponent implements OnInit {
   private lng = -1.045499;
 
   constructor(
-      private readonly productorService: ProductorServiceService
+      private readonly productorService: ProductorServiceService,
+      private readonly storage: Storage
   ) { }
 
   ngOnInit() {
@@ -43,12 +45,19 @@ export class MapComponent implements OnInit {
     this.productorService.getProductors().subscribe(value => {
       productors = value;
       for (const productor of productors) {
-        const popup = new mapboxgl.Popup({closeButton: false})
-            .setHTML(this.createProductorCard(productor));
-        const marker = new mapboxgl.Marker({clickTolerance: 500})
-            .setLngLat([productor.location.longitude, productor.location.latitude])
-            .setPopup(popup)
-            .addTo(this.map);
+        this.storage.get('vege').then(value1 => {
+          if ( value1 && productor.productType.includes(Product.Viande)){
+            null
+          }else {
+            const popup = new mapboxgl.Popup({closeButton: false})
+                .setHTML(this.createProductorCard(productor));
+
+            const marker = new mapboxgl.Marker({clickTolerance: 500})
+                .setLngLat([productor.location.longitude, productor.location.latitude])
+                .setPopup(popup)
+                .addTo(this.map);
+          }
+        });
       }
     });
   }

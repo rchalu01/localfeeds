@@ -24,8 +24,8 @@ export class ProductorDetailsPage implements OnInit {
     });
 
     //Getting productor annoucement
-    this.serviceAnnoncement.getAnnouncements().subscribe(value => {
-      this.announcement = value[0];        
+    this.serviceAnnoncement.getAnnouncementByProductor(this.router.getCurrentNavigation().extras.state.id).subscribe(value => {
+      this.announcement = value[0];
     });
   }
 

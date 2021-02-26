@@ -1,14 +1,12 @@
 <ion-content>
   <div class="content">
-    <ion-label routerLink="/productor-list">Go back</ion-label>
-    <div class="margin">
       <app-productor-main-details class="margin" [productorId]="productorId"></app-productor-main-details>
-    </div>
     <div class="margin">
-      <app-map-productor-detail class="margin" [geoloc]="position"></app-map-productor-detail>
+      <app-map-productor-detail class="margin" [id]="productorId"></app-map-productor-detail>
     </div>
     <div class="margin">
       <app-announcement-list-cell class="margin" *ngIf="announcement != ''" [announcement]="announcement"></app-announcement-list-cell>
     </div>
   </div>
+  <app-menu-navigation-bar></app-menu-navigation-bar>
 </ion-content>
