@@ -67,12 +67,18 @@ export class MapComponent implements OnInit {
     const titleCard = '<ion-card-title>' + productor.name + '</ion-card-title>';
     const subTitleCard = '<ion-card-subtitle>' + productor.schedule + '</ion-card-subtitle>';
     let iconCard = '<section>';
-    console.log(productor.productType.includes(Product.Viande));
-    iconCard = iconCard + (productor.productType.includes(Product.Viande) ? '<ion-img src="../../../assets/icon/meatColor.png" alt="icon-meat"></ion-img>' : '<ion-img src="../../../assets/icon/meat.png" alt="icon-meat"></ion-img>');
-    iconCard = iconCard + (productor.productType.includes(Product.Legume) ? '<ion-img src="../../../assets/icon/vegetableColor.png" alt="icon-vegetable"></ion-img>' : '<ion-img src="../../../assets/icon/vegetable.png" alt="icon-vegetable"></ion-img>');
-    iconCard = iconCard + (productor.productType.includes(Product.Fruit) ? '<ion-img src="../../../assets/icon/fruitsColor.png" alt="icon-fruit"></ion-img>' : '<ion-img src="../../../assets/icon/fruits.png" alt="icon-fruit"></ion-img>');
-    iconCard = iconCard + (productor.productType.includes(Product.Autre) ? '<ion-img src="../../../assets/icon/eggsColor.png" alt="icon-eggs"></ion-img>' : '<ion-img src="../../../assets/icon/eggs.png" alt="icon-eggs"></ion-img>');
-    iconCard = iconCard + (productor.productType.includes(Product.Laitage) ? '<ion-img src="../../../assets/icon/milkColor.png" alt="icon-milk"></ion-img>' : '<ion-img src="../../../assets/icon/milk.png" alt="icon-milk"></ion-img>');
+
+    if (productor.productType.includes(Product.Viande)) 
+      iconCard += '<ion-img src="../../../assets/icon/meatColor.png" alt="icon-meat"></ion-img>'
+    if (productor.productType.includes(Product.Legume)) 
+      iconCard += '<ion-img src="../../../assets/icon/vegetableColor.png" alt="icon-vegetable"></ion-img>'
+    if (productor.productType.includes(Product.Fruit)) 
+      iconCard += '<ion-img src="../../../assets/icon/fruitsColor.png" alt="icon-fruit"></ion-img>'
+    if (productor.productType.includes(Product.Autre)) 
+      iconCard += '<ion-img src="../../../assets/icon/eggsColor.png" alt="icon-eggs"></ion-img>'
+    if (productor.productType.includes(Product.Laitage)) 
+      iconCard += '<ion-img src="../../../assets/icon/milkColor.png" alt="icon-milk"></ion-img>'
+      
     iconCard = iconCard + '</section>';
     HTML = HTML + titleCard + subTitleCard + iconCard + '</ion-card>';
     return HTML;

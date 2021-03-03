@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Product } from 'src/app/models/product';
 import { ProductorServiceService } from 'src/app/services/ProductorService/productor-service.service';
 
 @Component({
