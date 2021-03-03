@@ -2,7 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
-import { Product } from 'src/app/models/product';
 
 @Component({
   selector: 'app-productor-list-cell',
@@ -14,12 +13,6 @@ export class ProductorListCellComponent implements OnInit {
   @Input() productor;
 
   favoriteImage: string = "loveWhite";
-
-  meatImage: string;
-  eggImage: string;
-  vegetableImage: string;
-  fruitImage: string;
-  milkImage: string;
 
   constructor(
     private storage: Storage,
@@ -34,13 +27,12 @@ export class ProductorListCellComponent implements OnInit {
         this.favoriteImage = "loveColor";
       }
     });
+  }
 
-    // Put products icons in color or not
-    this.productor.productType.includes(Product.Viande) ? this.meatImage = "meatColor": this.meatImage = "meat";
-    this.productor.productType.includes(Product.Autre) ? this.eggImage = "eggsColor": this.eggImage = "eggs";
-    this.productor.productType.includes(Product.Legume) ? this.vegetableImage = "vegetableColor": this.vegetableImage = "vegetable";
-    this.productor.productType.includes(Product.Fruit) ? this.fruitImage = "fruitsColor": this.fruitImage = "fruits";
-    this.productor.productType.includes(Product.Laitage) ? this.milkImage = "milkColor": this.milkImage = "milk";
+  // Check if we should display the icon or not
+  public checkIfProductInProductTypes(product) {
+
+    return this.productor.productType.includes(product);
   }
 
   // Change buttton favorite state

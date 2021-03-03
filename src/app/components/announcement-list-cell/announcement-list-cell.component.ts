@@ -11,11 +11,6 @@ export class AnnouncementListCellComponent implements OnInit {
 
   @Input() announcement;
 
-  meatImage: string;
-  eggImage: string;
-  vegetableImage: string;
-  fruitImage: string;
-  milkImage: string;
   productor: any;
   date: Date;
 
@@ -29,12 +24,12 @@ export class AnnouncementListCellComponent implements OnInit {
     this.productorService.getProductor(this.announcement.productor).subscribe(value => {
       this.productor = value;
       this.date = this.announcement.date.toDate();
-      this.productor.productType.includes(Product.Viande) ? this.meatImage = "meatColor": this.meatImage = "meat";
-      this.productor.productType.includes(Product.Autre) ? this.eggImage = "eggsColor": this.eggImage = "eggs";
-      this.productor.productType.includes(Product.Legume) ? this.vegetableImage = "vegetableColor": this.vegetableImage = "vegetable";
-      this.productor.productType.includes(Product.Fruit) ? this.fruitImage = "fruitsColor": this.fruitImage = "fruits";
-      this.productor.productType.includes(Product.Laitage) ? this.milkImage = "milkColor": this.milkImage = "milk";
     });
   }
 
+  // Check if we should display the icon or not
+  public checkIfProductInProductTypes(product) {
+
+    return this.productor.productType.includes(product);
+  }
 }
