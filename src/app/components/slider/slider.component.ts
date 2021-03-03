@@ -27,7 +27,7 @@ export class SliderComponent implements OnInit {
                     id: 2,
                     img: 'food_pack.png',
                     title: 'Proche de chez vous !',
-                    desc: 'Participer à l\'économie locale et renforcer vos liens avec producteurs locaux.'
+                    desc: 'Participer à l\'économie locale et renforcer vos liens avec les producteurs locaux.'
                 },
                 {
                     id: 3,
