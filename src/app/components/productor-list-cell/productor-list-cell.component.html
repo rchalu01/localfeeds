@@ -14,11 +14,11 @@
   </div>
   <!-- List of products -->
   <div class="product">
-    <ion-img src="../../../assets/icon/{{ meatImage }}.png" alt="icon-meat"></ion-img>
-    <ion-img src="../../../assets/icon/{{ eggImage }}.png" alt="icon-eggs"></ion-img>
-    <ion-img src="../../../assets/icon/{{ vegetableImage }}.png" alt="icon-vegetable"></ion-img>
-    <ion-img src="../../../assets/icon/{{ fruitImage }}.png" alt="icon-fruits"></ion-img>
-    <ion-img src="../../../assets/icon/{{ milkImage }}.png" alt="icon-milk"></ion-img>
+    <ion-img *ngIf="checkIfProductInProductTypes(0)" src="../../../assets/icon/meatColor.png" alt="icon-meat"></ion-img>
+    <ion-img *ngIf="checkIfProductInProductTypes(1)" src="../../../assets/icon/eggsColor.png" alt="icon-eggs"></ion-img>
+    <ion-img *ngIf="checkIfProductInProductTypes(2)" src="../../../assets/icon/vegetableColor.png" alt="icon-vegetable"></ion-img>
+    <ion-img *ngIf="checkIfProductInProductTypes(3)" src="../../../assets/icon/fruitsColor.png" alt="icon-fruits"></ion-img>
+    <ion-img *ngIf="checkIfProductInProductTypes(4)" src="../../../assets/icon/milkColor.png" alt="icon-milk"></ion-img>
   </div>
 </div>
 <hr>

@@ -15,12 +15,6 @@ export class ProductorListCellComponent implements OnInit {
 
   favoriteImage: string = "loveWhite";
 
-  meatImage: string;
-  eggImage: string;
-  vegetableImage: string;
-  fruitImage: string;
-  milkImage: string;
-
   constructor(
     private storage: Storage,
     private navCtrl: NavController
@@ -34,13 +28,12 @@ export class ProductorListCellComponent implements OnInit {
         this.favoriteImage = "loveColor";
       }
     });
+  }
 
-    // Put products icons in color or not
-    this.productor.productType.includes(Product.Viande) ? this.meatImage = "meatColor": this.meatImage = "meat";
-    this.productor.productType.includes(Product.Autre) ? this.eggImage = "eggsColor": this.eggImage = "eggs";
-    this.productor.productType.includes(Product.Legume) ? this.vegetableImage = "vegetableColor": this.vegetableImage = "vegetable";
-    this.productor.productType.includes(Product.Fruit) ? this.fruitImage = "fruitsColor": this.fruitImage = "fruits";
-    this.productor.productType.includes(Product.Laitage) ? this.milkImage = "milkColor": this.milkImage = "milk";
+  //
+  public checkIfProductInProductTypes(product) {
+
+    return this.productor.productType.includes(product);
   }
 
   // Change buttton favorite state
