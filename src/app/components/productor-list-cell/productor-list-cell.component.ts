@@ -2,7 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
-import { Product } from 'src/app/models/product';
 
 @Component({
   selector: 'app-productor-list-cell',
@@ -30,7 +29,7 @@ export class ProductorListCellComponent implements OnInit {
     });
   }
 
-  //
+  // Check if we should display the icon or not
   public checkIfProductInProductTypes(product) {
 
     return this.productor.productType.includes(product);
