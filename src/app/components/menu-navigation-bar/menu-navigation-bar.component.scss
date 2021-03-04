@@ -1,5 +1,5 @@
 ion-tab-bar {
-  --background: rgba(var(--ion-color-go-green-rgb, 0.3));
+  --background: rgba(254, 174, 175);
 }
 
 ion-tab-button {
@@ -10,6 +10,7 @@ ion-tab-button {
 .style-img {
   width: 60%;
   height: 60%;
+  object-fit: contain;
 }
 
 .style-img-farmer {
@@ -22,4 +23,5 @@ ion-tabs{
   right: unset;
   contain: none;
   height: unset;
+  position: fixed;
 }
