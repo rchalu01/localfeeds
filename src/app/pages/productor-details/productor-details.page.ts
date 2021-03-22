@@ -9,9 +9,9 @@ import { AnnouncementServiceService } from 'src/app/services/announcementService
 })
 export class ProductorDetailsPage implements OnInit {
 
-  productorId: any;
+  productorId: string;
   announcement: any;
-  position: any = [-1.045499, 46.169372];
+  position: Array<number> = [-1.045499, 46.169372];
 
   constructor(
     private route: ActivatedRoute,
@@ -30,5 +30,4 @@ export class ProductorDetailsPage implements OnInit {
       this.announcement = value[0];
     });
   }
-
 }
