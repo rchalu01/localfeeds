@@ -13,7 +13,9 @@ export class SliderComponent implements OnInit {
 
     slider: any;
 
-    constructor(private router: Router) {
+    constructor(private router: Router) { }
+
+    ngOnInit() {
         this.slider = {
             textButton: "Suivant",
             sliderItems: [
@@ -37,10 +39,6 @@ export class SliderComponent implements OnInit {
                 }
             ]
         }
-    }
-
-    ngOnInit() {
-
     }
 
     slideNext(slider: any, sliderView: IonSlides) {

@@ -1,9 +1,7 @@
-import {AfterContentInit, AfterViewChecked, AfterViewInit, Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { environment } from '../../../environments/environment';
 import * as mapboxgl from 'mapbox-gl';
 import {ProductorServiceService} from '../../services/ProductorService/productor-service.service';
-import firebase from 'firebase';
-import TIMESTAMP = firebase.database.ServerValue.TIMESTAMP;
 import {Product} from '../../models/product';
 import {Storage} from '@ionic/storage';
 
