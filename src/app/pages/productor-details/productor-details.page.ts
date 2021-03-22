@@ -10,7 +10,7 @@ import { AnnouncementServiceService } from 'src/app/services/announcementService
 export class ProductorDetailsPage implements OnInit {
 
   productorId: any;
-  announcement: any = '';
+  announcement: any;
   position: any = [-1.045499, 46.169372];
 
   constructor(
@@ -26,7 +26,7 @@ export class ProductorDetailsPage implements OnInit {
     });
 
     //Getting productor annoucement
-    this.serviceAnnoncement.getAnnouncementByProductor(this.router.getCurrentNavigation().extras.state.id).subscribe(value => {
+    this.serviceAnnoncement.getAnnouncementByProductor(this.router.getCurrentNavigation().extras.state.id).subscribe(value => {      
       this.announcement = value[0];
     });
   }
