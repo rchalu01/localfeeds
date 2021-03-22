@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ProductorServiceService } from 'src/app/services/ProductorService/productor-service.service';
 import {Storage} from '@ionic/storage';
 import {Product} from '../../models/product';
-import * as mapboxgl from 'mapbox-gl';
 
 @Component({
   selector: 'app-productor-list',

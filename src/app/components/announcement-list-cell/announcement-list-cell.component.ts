@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ProductorServiceService} from '../../services/ProductorService/productor-service.service';
-import {Product} from '../../models/product';
 
 @Component({
   selector: 'app-announcement-list-cell',
@@ -20,7 +19,6 @@ export class AnnouncementListCellComponent implements OnInit {
 
   ngOnInit() {
     // Put products icons in color or not
-    console.log(this.announcement.date.se);
     this.productorService.getProductor(this.announcement.productor).subscribe(value => {
       this.productor = value;
       this.date = this.announcement.date.toDate();
@@ -29,7 +27,6 @@ export class AnnouncementListCellComponent implements OnInit {
 
   // Check if we should display the icon or not
   public checkIfProductInProductTypes(product) {
-
     return this.productor.productType.includes(product);
   }
 }

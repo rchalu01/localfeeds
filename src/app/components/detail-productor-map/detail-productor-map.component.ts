@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Productor } from 'src/app/models/productor';
 import { ProductorServiceService } from 'src/app/services/ProductorService/productor-service.service';
 
 @Component({
@@ -10,11 +9,11 @@ import { ProductorServiceService } from 'src/app/services/ProductorService/produ
 export class DetailProductorMapComponent implements OnInit {
 
   private productor: any;
-  private meatImage: string;
-  private eggImage: string;
-  private vegetableImage: string;
-  private fruitImage: string;
-  private milkImage: string;
+  public meatImage: string;
+  public eggImage: string;
+  public vegetableImage: string;
+  public fruitImage: string;
+  public milkImage: string;
 
   constructor(
     private readonly productorService: ProductorServiceService
@@ -22,7 +21,6 @@ export class DetailProductorMapComponent implements OnInit {
 
   ngOnInit() {
     this.productorService.getProductor('nRLKzndPz6CZ05XNf01h').subscribe(value => {
-      console.log(value);
       this.productor = value;
       this.productor.productType.includes(1) ? this.meatImage = 'meatColor' : this.meatImage = 'meat';
       this.productor.productType.includes(2) ? this.eggImage = 'eggsColor' : this.eggImage = 'eggs';
@@ -31,5 +29,4 @@ export class DetailProductorMapComponent implements OnInit {
       this.productor.productType.includes(5) ? this.milkImage = 'milkColor' : this.milkImage = 'milk';
     });
   }
-
 }
