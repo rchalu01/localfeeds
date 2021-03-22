@@ -11,12 +11,10 @@ export class PreferencesPage implements OnInit {
 
     public isToggled: boolean;
 
-    constructor(private router: Router, private storage: Storage) {
-        this.isToggled = false;
-    }
+    constructor(private router: Router, private storage: Storage) { }
 
     ngOnInit() {
-
+        this.isToggled = false;
     }
 
     savePreferences() {

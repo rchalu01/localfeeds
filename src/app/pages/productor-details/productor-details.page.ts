@@ -17,7 +17,9 @@ export class ProductorDetailsPage implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private serviceAnnoncement: AnnouncementServiceService
-  ) { 
+  ) { }
+
+  ngOnInit() {
     // Getting productor id from route
     this.route.queryParams.subscribe(() => {
       this.productorId = this.router.getCurrentNavigation().extras.state.id;
@@ -27,9 +29,6 @@ export class ProductorDetailsPage implements OnInit {
     this.serviceAnnoncement.getAnnouncementByProductor(this.router.getCurrentNavigation().extras.state.id).subscribe(value => {
       this.announcement = value[0];
     });
-  }
-
-  ngOnInit() {
   }
 
 }
