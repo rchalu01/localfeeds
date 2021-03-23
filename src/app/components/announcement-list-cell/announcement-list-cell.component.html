@@ -1,0 +1,24 @@
+<div class="cell" *ngIf="announcement && productor">
+  <div class="announcement-infos">
+    <div class="announcement-top">
+      <ion-text class="title">{{ announcement.title }}</ion-text>
+      <ion-text>{{ date | date :'dd/MM/yyyy' }}</ion-text>
+    </div>
+    <div class="announcement-content">
+      <ion-text>{{ announcement.content }}</ion-text>
+    </div>
+  </div>
+  <!-- List of products -->
+  <div class="product">
+    <ion-img *ngIf="checkIfProductInProductTypes(0)" src="../../../assets/icon/meatColor.png" alt="icon-meat"></ion-img>
+    <ion-img *ngIf="checkIfProductInProductTypes(1)" src="../../../assets/icon/eggsColor.png" alt="icon-eggs"></ion-img>
+    <ion-img *ngIf="checkIfProductInProductTypes(2)" src="../../../assets/icon/vegetableColor.png" alt="icon-vegetable"></ion-img>
+    <ion-img *ngIf="checkIfProductInProductTypes(3)" src="../../../assets/icon/fruitsColor.png" alt="icon-fruits"></ion-img>
+    <ion-img *ngIf="checkIfProductInProductTypes(4)" src="../../../assets/icon/milkColor.png" alt="icon-milk"></ion-img>
+  </div>
+  <div class="announcement-bottom">
+    <ion-button>{{ productor.name }}<!--<ion-icon name="arrow-forward-outline"></ion-icon>--></ion-button>
+    <ion-text>11.2 km</ion-text>
+  </div>
+</div>
+<hr>

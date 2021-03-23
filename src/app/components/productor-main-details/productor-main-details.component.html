@@ -1,0 +1,19 @@
+<div *ngIf="productor">
+  <div class="main-details">
+    <ion-img class="productor-image" src="../../../assets/images/defaultFarm.jpg"></ion-img>
+    <div class="productor-details">
+      <ion-label class="name">{{ productor.name }}</ion-label>
+      <div class="product">
+        <ion-img *ngIf="checkIfProductInProductTypes(0)" src="../../../assets/icon/meatColor.png" alt="icon-meat"></ion-img>
+        <ion-img *ngIf="checkIfProductInProductTypes(1)" src="../../../assets/icon/eggsColor.png" alt="icon-eggs"></ion-img>
+        <ion-img *ngIf="checkIfProductInProductTypes(2)" src="../../../assets/icon/vegetableColor.png" alt="icon-vegetable"></ion-img>
+        <ion-img *ngIf="checkIfProductInProductTypes(3)" src="../../../assets/icon/fruitsColor.png" alt="icon-fruits"></ion-img>
+        <ion-img *ngIf="checkIfProductInProductTypes(4)" src="../../../assets/icon/milkColor.png" alt="icon-milk"></ion-img>
+      </div>
+      <ion-label>{{ productor.schedule }}</ion-label>
+    </div>
+  </div>
+  <div class="productor-description">
+    <ion-label>{{ productor.description }}</ion-label>
+  </div>
+</div>

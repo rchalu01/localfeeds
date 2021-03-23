@@ -24,3 +24,40 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+/* Marker tweaks */
+.mapboxgl-popup-content {
+  font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.mapboxgl-popup-content-wrapper {
+  padding: 1%;
+}
+
+.mapboxgl-popup-content {
+  ion-card {
+    --background: #E8D6DA;
+  }
+  ion-card-title {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.3em;
+  }
+  ion-card-subtitle {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1em;
+  }
+  ion-img {
+    margin: 5% 0 5% 5%;
+    width: 10%;
+    height: 10%;
+  }
+  section {
+    display: flex;
+    flex-direction: row;
+  }
+}

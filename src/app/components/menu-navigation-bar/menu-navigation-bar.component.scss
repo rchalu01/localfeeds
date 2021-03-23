@@ -1,0 +1,27 @@
+ion-tab-bar {
+  --background: rgba(254, 174, 175);
+}
+
+ion-tab-button {
+  font-size: 14px;
+  color: black;
+}
+
+.style-img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.style-img-farmer {
+  width: 45%;
+  height: 60%;
+}
+ion-tabs{
+  top: unset;
+  left: unset;
+  right: unset;
+  contain: none;
+  height: unset;
+  position: fixed;
+}

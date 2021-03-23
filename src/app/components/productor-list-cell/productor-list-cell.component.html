@@ -1,0 +1,24 @@
+<div class="cell" (click)="openProductorDetailPage()">
+  <div class="productor-info">
+    <div class="infos">
+      <!-- Image of productor -->
+      <ion-img src="../../../assets/images/{{ productor.image }}.png" alt="img-productor" *ngIf="productor.image"></ion-img>
+      <ion-img src="../../../assets/images/defaultFarm.jpg" alt="img-productor" *ngIf="!productor.image"></ion-img>
+      <div class="productor-name">
+        <ion-label class="name">{{ productor.name }}</ion-label>
+        <ion-label class="hour">{{ productor.schedule }}</ion-label>
+      </div>
+    </div>
+    <!-- Button favorite -->
+    <img class="fav-icon" src="../../../assets/icon/{{ favoriteImage }}.svg" alt="icon-fav" (click)="addToFavorite($event)">
+  </div>
+  <!-- List of products -->
+  <div class="product">
+    <ion-img *ngIf="checkIfProductInProductTypes(0)" src="../../../assets/icon/meatColor.png" alt="icon-meat"></ion-img>
+    <ion-img *ngIf="checkIfProductInProductTypes(1)" src="../../../assets/icon/eggsColor.png" alt="icon-eggs"></ion-img>
+    <ion-img *ngIf="checkIfProductInProductTypes(2)" src="../../../assets/icon/vegetableColor.png" alt="icon-vegetable"></ion-img>
+    <ion-img *ngIf="checkIfProductInProductTypes(3)" src="../../../assets/icon/fruitsColor.png" alt="icon-fruits"></ion-img>
+    <ion-img *ngIf="checkIfProductInProductTypes(4)" src="../../../assets/icon/milkColor.png" alt="icon-milk"></ion-img>
+  </div>
+</div>
+<hr>
