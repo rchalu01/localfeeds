@@ -17,7 +17,7 @@
 
 # Régles de dév
 
-- Avoir des variables typées le plus possible
+- Avoir des variables typées le plus possible ( certain retour asynchrone de firebase ne peuvent être typés )
 - Retours de fonctions typés.
 - Variables, fonctions et commentaires en anglais
 
